@@ -1,51 +1,29 @@
 {% extends "base.html" %}
-
-  {% block content %}
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-6">
-          <div class="form-box">
-            <h1> User Signup </h1>
-            <form action="/signup" method="post">
-              <table class="table">
-                <tbody>
-                        <style>
-                                body {
-                                  background-color:white
-                                }
-                                .error{
-                                    color:red
-                                }
-                              </style>
-                  <tr class="form-group">
-                    <td><label for="user_name">Username: </label></td>
-                    <td><input type="text" class="form-control" name="user_name" id="user_name" placeholder="username" value={{username_input}}></td>
-                    <td><p class="error">{{user_name_error}}</p></td>
-                  </tr>
-                  <tr class="form-group">
-                    <td><label for="password">Password: </label></td>
-                    <td><input type="password" class="form-control" name="password" id="password" placeholder="••••••••"></td>
-                    <td><p class="error">{{password_error}}</p></td>
-                  </tr>
-                  <tr class="form-group">
-                    <td><label for="verify">Verify Password: </label></td>
-                    <td><input type="password" class="form-control" name="verify" id="verify" placeholder="••••••••"></td>
-                    <td><p class="error">{{verify_error}}</p></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit"></input></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-3">
-        </div>
-      </div>
-    </div>
-  {% endblock %}
+{% block title %} Blogz {% endblock %}
+{% block header %} Signup {% endblock %}
+{% block content %}
+<h2>Signup</h2>
+<form action="/signup" method="post">
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td>
+                <input id="username" name="username" type="text" value="{{ username }}">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input id="password" name="password" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="verify">Verify Password</label></td>
+            <td>
+                <input id="verify" name="verify" type="password">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

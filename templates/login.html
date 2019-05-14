@@ -3,14 +3,14 @@
 {% block content %}
 
 
-<h1>Log in </h1>
+<h2>Log in </h2>
 
 <form action="/login" method="post">
     <table>
         <tr>
-            <td><label for="user_name">User Name</label></td>
+            <td><label for="username">User Name</label></td>
             <td>
-                <input name="user_name" type="user_name" value="{{ user_name }}">
+                <input name="username" type="username" value="{{ username }}">
             </td>
         </tr>
         <tr>
@@ -20,7 +20,7 @@
             </td>
         </tr>
     </table>
-    <input type="submit" value="Login">
+    <input type="submit" value="Submit">
     
     <p>Don't have an account?<a href="/signup">Create one!</a></p>
 </form>

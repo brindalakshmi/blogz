@@ -3,15 +3,23 @@ html {
     padding:  0;
 }
 
-h1 {
+h1 {font-size: 28px;
     text-align: center;
-    }
+}
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    font-family: Helvetica;
+    text-align: center;
+}
+h1 {font-size: 20px;
+    text-align: center; 
+}   
 
 .error {
     color: red;
 }
-
-
 
 body { 
     background:rgb(192, 224, 154);
